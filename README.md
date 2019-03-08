@@ -1,2 +1,2 @@
 #JavaWeb of Mmall project  
-See branch v1.*.*  
+See branch version 1.XXX.XXX
