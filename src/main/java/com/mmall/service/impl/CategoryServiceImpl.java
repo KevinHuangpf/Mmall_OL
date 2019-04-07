@@ -20,7 +20,7 @@ import java.util.Set;
  * Created by KevinHuang on 2019/3/9.
  */
 
-@Service("CategoryServiceImpl")
+@Service("iCategoryService")
 public class CategoryServiceImpl implements ICategoryService {
 
     private Logger logger = LoggerFactory.getLogger(CategoryServiceImpl.class);
