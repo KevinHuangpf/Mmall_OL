@@ -2,19 +2,19 @@
 <body>
 <h2>Hello World!</h2>
 
-SpringMVC 上传文件
+SpringMVC UploadFile
 <form name="form1" action="/manage/product/upload.do" method="post" enctype="multipart/form-data">
     <input type="file" name="upload_file"/>
-    <input type="submit" value="SpringMVC 上传文件"/>
+    <input type="submit" value="SpringMVC UploadFile"/>
 
 </form>
 
 
 
-富文本 上传文件
+RichText UploadFile
 <form name="form1" action="/manage/product/richtext_img_upload.do" method="post" enctype="multipart/form-data">
     <input type="file" name="upload_file"/>
-    <input type="submit" value="富文本 上传文件"/>
+    <input type="submit" value="RichText UploadFile"/>
 
 </form>
 

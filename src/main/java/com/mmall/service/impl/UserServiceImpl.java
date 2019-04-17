@@ -29,7 +29,7 @@ public class UserServiceImpl implements IUserService {
      * @param password
      * @return
      */
-    @Override
+
     public ServerResponse<User> login(String username, String password) {
         int resultCount = userMapper.checkUsername(username);
         System.out.println("resultCount: "+resultCount);
