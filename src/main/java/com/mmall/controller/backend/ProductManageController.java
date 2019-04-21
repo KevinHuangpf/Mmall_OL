@@ -59,14 +59,14 @@ public class ProductManageController {
 
     @RequestMapping("set_sale_status.do")
     @ResponseBody
-    public ServerResponse setSaleStatus(HttpSession session, Integer productID,Integer status){
+    public ServerResponse setSaleStatus(HttpSession session, Integer productId,Integer status){
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"管理员未登录，请登录管理员");
         }
         if(iUserService.checkAdminRole(user).isSuccess()){
             //增加产品添加逻辑
-            return iProductService.setSaleStatus(productID,status);
+            return iProductService.setSaleStatus(productId,status);
         }else {
             return ServerResponse.createByErrorMessage("无权限操作");
         }
@@ -74,14 +74,14 @@ public class ProductManageController {
 
     @RequestMapping("detail.do")
     @ResponseBody
-    public ServerResponse getDetail(HttpSession session, Integer productID){
+    public ServerResponse getDetail(HttpSession session, Integer productId){
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if(user == null){
             return ServerResponse.createByErrorCodeMessage(ResponseCode.NEED_LOGIN.getCode(),"管理员未登录，请登录管理员");
         }
         if(iUserService.checkAdminRole(user).isSuccess()){
             //获取详情
-            return iProductService.manageProductDetail(productID);
+            return iProductService.manageProductDetail(productId);
 
         }else {
             return ServerResponse.createByErrorMessage("无权限操作");
